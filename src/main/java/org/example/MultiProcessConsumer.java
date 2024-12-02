@@ -14,6 +14,12 @@ import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/*
+* 해당 예제코드는 컨슈머에서 실행되는 WorkerProcess를 여러개 생성하는 예제이다.
+* ConsumWorkerProcess 클래스를 Runnable I/F를 구현하여 run메서드를 구현하고
+* Consum후 Worker 실행 시 ExcuteorService에서 excute시킨다..
+* 해당 코드로 구현하면 Consumer에서 순차적으로 실행되어야 할 경우에 문제가 생길 수 있다.
+* */
 @Slf4j
 public class MultiProcessConsumer {
 
